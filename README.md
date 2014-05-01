@@ -17,11 +17,22 @@ Where:
 * `e0` = The dept of the attractive well (in unitless energy).
 * `range` = The range of the attractive part of the interaction potential as compared to the repulsive part; `range = 1` is a standard Lennard-Jones potential.
 
-## [aspherical_coexistence.c]
+## [aspherical_coexistence.c](aspherical_coexistence.c)
+
 Performs a Monte Carlo of a box containing one-half fcc crystalline and one-half liquid-phase hard aspherical particles. Particles are constructed as described in [2], by placing some number of balls in an overlapping configuration.  The number of balls and degree of overlap are adjustable, allowing for control of the degree of asphericity.  See [3] for more information.
+
+### Usage:
+```
+./aspherical_coexistence nBall sigma pressure
+```
+Where:
+
+* `nBall` = the number of balls of which the particles are constructed
+* `sigma` = how far from the particle center balls are placed in particle construction
+* `pressure` = the system pressure
 
 ## References
 
-1. W. L. Miller and A. Cacciuto. Hierarchical self-assembly of asymmetric amphiphatic spherical colloidal particles. Phys. Rev. E 80, 021404 (2009).
-2. W. L. Miller, B. Bozorgui, and A. Cacciuto. Crystallization of hard aspherical particles. J. Chem. Phys. 132, 134901 (2010).
-3. W. L. Miller and A. Cacciuto. On the phase behavior of hard aspherical particles. J. Chem. Phys. 133, 234903 (2010).
+1. W. L. Miller and A. Cacciuto. [Hierarchical self-assembly of asymmetric amphiphatic spherical colloidal particles](http://arxiv.org/pdf/0905.4236v3.pdf). Phys. Rev. E 80, 021404 (2009).
+2. W. L. Miller, B. Bozorgui, and A. Cacciuto. [Crystallization of hard aspherical particles](http://arxiv.org/pdf/1002.0316v2.pdf). J. Chem. Phys. 132, 134901 (2010).
+3. W. L. Miller and A. Cacciuto. [On the phase behavior of hard aspherical particles](http://arxiv.org/pdf/1010.1245v2.pdf). J. Chem. Phys. 133, 234903 (2010).
