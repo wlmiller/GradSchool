@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Grad School Code by wlmiller</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Grad School Code</h1>
+        <p>Some example code from my graduate school studies.</p>
+
+        <p class="view"><a href="https://github.com/wlmiller/GradSchool">View the Project on GitHub <small>wlmiller/GradSchool</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/wlmiller/GradSchool/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/wlmiller/GradSchool/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/wlmiller/GradSchool">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="grad-school-code" class="anchor" href="#grad-school-code"><span class="octicon octicon-link"></span></a>Grad School Code</h1>
+
+<p>This repository contains example code from my time working toward my Ph.D. from Columbia University in Chemical Physics.</p>
+
+<h2>
+<a name="janus_mdc" class="anchor" href="#janus_mdc"><span class="octicon octicon-link"></span></a><a href="Janus_MD.c">Janus_MD.c</a>
+</h2>
+
+<p>This code runs a simulation of a generalization of so-called "Janus" particles.  Janus particles are particles which are one-half attractive and one-half repulsive; our generalization allows that ratio to vary from one-half.  For more information, see [1].</p>
+
+<h3>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<pre><code>./Janus_MD thetaMax e0 range
+</code></pre>
+
+<p>Where:</p>
+
+<ul>
+<li>
+<code>thetaMax</code> = The maximum angle of the attractive region (Janus particles are recovered for <code>thetaMax = pi</code>.</li>
+<li>
+<code>e0</code> = The dept of the attractive well (in unitless energy).</li>
+<li>
+<code>range</code> = The range of the attractive part of the interaction potential as compared to the repulsive part; <code>range = 1</code> is a standard Lennard-Jones potential.</li>
+</ul><h2>
+<a name="aspherical_coexistencec" class="anchor" href="#aspherical_coexistencec"><span class="octicon octicon-link"></span></a><a href="aspherical_coexistence.c">aspherical_coexistence.c</a>
+</h2>
+
+<p>Performs a Monte Carlo of a box containing one-half fcc crystalline and one-half liquid-phase hard aspherical particles. Particles are constructed as described in [2], by placing some number of balls in an overlapping configuration.  The number of balls and degree of overlap are adjustable, allowing for control of the degree of asphericity.  See [3] for more information.</p>
+
+<h3>
+<a name="usage-1" class="anchor" href="#usage-1"><span class="octicon octicon-link"></span></a>Usage:</h3>
+
+<pre><code>./aspherical_coexistence nBall sigma pressure
+</code></pre>
+
+<p>Where:</p>
+
+<ul>
+<li>
+<code>nBall</code> = the number of balls of which the particles are constructed</li>
+<li>
+<code>sigma</code> = how far from the particle center balls are placed in particle construction</li>
+<li>
+<code>pressure</code> = the system pressure</li>
+</ul><h2>
+<a name="references" class="anchor" href="#references"><span class="octicon octicon-link"></span></a>References</h2>
+
+<ol>
+<li>W. L. Miller and A. Cacciuto. <a href="http://arxiv.org/pdf/0905.4236v3.pdf">Hierarchical self-assembly of asymmetric amphiphatic spherical colloidal particles</a>. Phys. Rev. E 80, 021404 (2009).</li>
+<li>W. L. Miller, B. Bozorgui, and A. Cacciuto. <a href="http://arxiv.org/pdf/1002.0316v2.pdf">Crystallization of hard aspherical particles</a>. J. Chem. Phys. 132, 134901 (2010).</li>
+<li>W. L. Miller and A. Cacciuto. <a href="http://arxiv.org/pdf/1010.1245v2.pdf">On the phase behavior of hard aspherical particles</a>. J. Chem. Phys. 133, 234903 (2010).</li>
+</ol>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/wlmiller">wlmiller</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
